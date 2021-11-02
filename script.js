@@ -14,10 +14,10 @@ function submitForm(){
 
     //date
 
-    const date = Date.now()
-    console.log(date)
-    const today = new date(date);
-    console.log(today)
+    const date = Date.now();
+    console.log(date);
+    const today = new Date(date);
+    console.log(today);
 
     //posts
     var message = document.getElementById("message").innerHTML;
@@ -33,6 +33,7 @@ function submitForm(){
     <hr>
     `;
 
+    document.getElementById("message").innerHTML = message;
 
     return false;
 }
