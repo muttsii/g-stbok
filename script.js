@@ -1,6 +1,6 @@
 function submitForm(){
     console.log("debug");
-    debugger;
+    //debugger; 
 
     const namn = document.forms["guestbook"]["namn"].value;
     const epost = document.forms["guestbook"]["epost"].value;
@@ -12,5 +12,27 @@ function submitForm(){
     console.log(telefon);
     console.log(meddelande);
 
-    return true;
+    //date
+
+    const date = Date.now()
+    console.log(date)
+    const today = new date(date);
+    console.log(today)
+
+    //posts
+    var message = document.getElementById("message").innerHTML;
+
+    message +=`
+    ${namn}, (${epost})
+    <br>
+    ${telefon}
+    <br>
+    ${meddelande}
+    <br>
+    ${today.toUTCString()}
+    <hr>
+    `;
+
+
+    return false;
 }
